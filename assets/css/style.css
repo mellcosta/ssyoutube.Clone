@@ -1,0 +1,256 @@
+:root {
+    --purple: #7832e2;
+    --indigo: #08003a;
+    --red: #de2545;
+    --green: #44c553;
+    --teal: #20c997;
+    --cyan: #007bff;
+    --gray-dark: #343a40;
+    --primary: #08003a;
+    --warning: #ffde03;
+    --danger: #ff5916;
+    --white: #fff;
+    --gray: #6c757d;
+    --light: #ced4da;
+    --dark: #212529;
+    --black: #000;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: Nunito,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--white);
+    font-family: var(--font-family-sans-serif), var(--font-family-monospace);
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1, h2, h3{
+    font-weight: 400;
+}
+
+/*Header*/
+header{
+    background: var(--indigo);
+    padding: 20px;
+    color: var(--white);
+}
+
+header .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25vh;
+    font-size: 20px;
+}
+
+header #logo{
+    display: inline-flex;
+}
+
+header #logo a{
+    margin-bottom: 5px;
+}
+
+header .download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 80px 10px;
+}
+
+.download h1{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--font-family-sans-serif);
+}
+
+.download .link {
+    width: 100%;
+    height: 10vh;
+    background: var(--white);
+    border: 5px solid --white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 15px;
+}
+
+.link input {
+    width: 70%;
+    height: 90%;
+    border: none;
+    outline: none;
+    color: var(--gray);
+    cursor: text;
+}
+
+.link button{
+    width: 15%;
+    height: 80%;
+    background: var(--red);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/*Main*/
+
+main{
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--gray);
+}
+
+main .content > section{
+    padding: 30px;
+}
+
+main p, h1, h2,h3{
+    margin-top: 30px;
+}
+
+main h1 {
+    color: var(--dark);
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Platform*/
+main .platform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.platform .platformIcons {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+} 
+
+/*How To Download*/
+.howToDown section{
+    margin-bottom: 10px;
+    padding: 15px;
+    text-align: justify;
+}
+
+.cards{
+    display: flex;
+    flex-flow: row wrap;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.online .cards{
+    gap: 1em;
+}
+.online .cards figcaption{
+    margin-top: 20px;
+}
+
+.bg{
+    background: var(--indigo);
+    color: var(--white);
+}
+.bg h1{
+    color: var(--white);
+}
+
+.bg a{
+    color: var(--purple);
+}
+.bg a:hover{
+    color: #752198;
+    text-decoration: underline;
+}
+
+.bg li{
+    list-style: decimal;
+}
+
+.bg ul, .saveMovie ul{
+    padding: 10px;
+}
+
+.saveMovie li {
+    list-style: disc;
+}
+
+ .downloadSS .cards figure{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5em;
+    font-size: 19px;
+    color: var(--dark);
+    padding: 20px;
+}
+
+.downloadSS .cards figure span img{
+    margin-right: 100px;
+}
+
+/*Footer*/
+footer {
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 50px 20px;
+}
+
+footer table td{
+    color: var(--teal);
+}
+
+footer .mobile .tab{
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+footer .mobile .tab td{
+    border-bottom: 1px solid var(--gray);
+    height: 50px;
+}
+
+footer .mobile .tab tr:last-child td{
+    border-bottom: none;
+}
+
+.desktop{
+    display: none;
+}
